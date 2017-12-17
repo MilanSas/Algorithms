@@ -10,6 +10,7 @@ namespace BinaryTree
     {   //Most of these methods are only used in BinaryNode class. Improvements welcome
         Node<T> Right { get; set; }
         Node<T> Left { get; set; }
+        Node<T> Parent { get; set; }
         Node<T> Insert(T value);
         Node<T> Delete(T value);
         Node<T> FindMostLeft();
@@ -25,6 +26,8 @@ namespace BinaryTree
     {
         public Node<T> Right { get => this; set { } }
         public Node<T> Left { get => this; set { } }
+        public Node<T> Parent { get => this; set { } }
+
         // if you want to delete value that doesn't exist
         public Node<T> Delete(T value)
         {
@@ -83,6 +86,8 @@ namespace BinaryTree
 
         public Node<T> Right { get => this.right; set => this.right = value; }
         public Node<T> Left { get => this.left; set => this.left = value; }
+        public Node<T> Parent { get => this.parent; set => this.parent = value; }
+
         //constructor
         public BinaryNode(T Value,Node<T> parent, Node<T> left, Node<T> right)
         {   //alternates between deleting predecessor and successor to keep tree more balanced
@@ -179,14 +184,23 @@ namespace BinaryTree
                 {
                     Console.WriteLine("deleted " + value);
                     this.Value = this.left.getvalue();
-                    return this.left.Delete(this.Value);
+                    this.right = this.left.Right;
+                    this.left = this.left.Left;
+                    this.right.Parent = this;
+                    this.left.Parent = this;
+
+                    return this.getRoot();
                 }
                 //deletes right child
                 else
                 {
                     Console.WriteLine("deleted " + value);
                     this.Value = this.right.getvalue();
-                    return this.right.Delete(this.Value);
+                    this.left = this.right.Left;
+                    this.right = this.right.Right;
+                    this.right.Parent = this;
+                    this.left.Parent = this;
+                    return this.getRoot();
                 }
 
             }
@@ -196,6 +210,7 @@ namespace BinaryTree
                 //if its only node returns empty
                 if (this.parent.isempty())
                 {
+                    Console.WriteLine("deleted " + value);
                     return this.parent;
                 }
                 //if its the left child of its parent
