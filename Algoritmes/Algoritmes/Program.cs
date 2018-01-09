@@ -52,10 +52,10 @@ namespace Algoritmes
         static void Main(string[] args)
         {
             List<int> intlist1 = new List<int>() { 1, 2, 32, 38, 234, 1234, 9909};
-            bool result = InListLinear(30, intlist1);
+            bool result = InListLinear(38, intlist1);
             Console.WriteLine(result);
 
-            int result1 = InListBinary(32, intlist1);
+            int result1 = InListBinary(234, intlist1);
             Console.WriteLine(result1);
         }
     }
