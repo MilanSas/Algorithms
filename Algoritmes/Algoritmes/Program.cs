@@ -55,7 +55,7 @@ namespace Algoritmes
             bool result = InListLinear(30, intlist1);
             Console.WriteLine(result);
 
-            int result1 = InListBinary(31, intlist1);
+            int result1 = InListBinary(32, intlist1);
             Console.WriteLine(result1);
         }
     }
