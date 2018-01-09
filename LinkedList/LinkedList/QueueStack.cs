@@ -8,7 +8,7 @@ namespace LinkedList
 {
     class DoubleListQueue<T>
     {
-        //je kan misschien beter void returnen inplaats van lijst maar vond dit makkelijker om te testen in program.cs
+      
 
         public doublelist<T> list;
         // voeg lijst toe
