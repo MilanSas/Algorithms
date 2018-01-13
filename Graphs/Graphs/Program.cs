@@ -164,8 +164,9 @@ namespace Graphs
 
            List<Node> nodelist = new List<Node> {A2, B2, C2, D2, E2, F2 };
 
-            Console.WriteLine("Order dijkstra through graph: ");
+            Console.WriteLine("Order dijkstra through graph from A: ");
             Dijkstra(nodelist, A2);
+            Console.WriteLine("Order dijkstra through graph from F: ");
             Dijkstra(nodelist, F2);
 
             Console.WriteLine("Distance to point A to B: " + A2.getDistance(B2));
