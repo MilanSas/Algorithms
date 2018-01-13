@@ -76,9 +76,11 @@ namespace Sorting_Algoritme
                 return;
             }
         }
+
+
         static void Main(string[] args)
         {
-            List<int> list1 = new List<int>() { 2, 7, 245, 1234, 3, 6, 5, 43, 9 };
+            List<int> list1 = new List<int>() { 2, 7, 245, 1234, 3, 6, 5, 43};
 
             //List<int> list2 = insertionsort(list1);
 

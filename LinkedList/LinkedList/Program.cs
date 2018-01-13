@@ -15,7 +15,7 @@ namespace LinkedList
                 list = list.Next;
             }
 
-            Console.WriteLine(result);
+            Console.WriteLine(result + "Empty");
         }
         static void Main(string[] args)
         {
@@ -77,17 +77,22 @@ namespace LinkedList
 
 
 
-            // oude delete functies om te testen moet nog wel werken als je wilt testen.
+            //oude delete functies om te testen moet nog wel werken als je wilt testen.
 
-            //doublelist1 = doublelist1.Delete(doublelist1, 4);
-            //Printist<int>(doublelist1);
+            doublelist1 = doublelist1.Delete(doublelist1, 9);
+            Printist<int>(doublelist1);
 
-            //doublelist1 = doublelist1.Delete(doublelist1, 8);
-            //Printist<int>(doublelist1);
+            doublelist1 = doublelist1.Delete(doublelist1, 8);
+            Printist<int>(doublelist1);
 
-            //doublelist1 = doublelist1.Delete(doublelist1, 2);
-            //Printist<int>(doublelist1);
+            doublelist1 = doublelist1.Delete(doublelist1, 2);
+            Printist<int>(doublelist1);
 
+            doublelist1 = doublelist1.Delete(doublelist1, 4);
+            Printist<int>(doublelist1);
+
+            doublelist1 = doublelist1.Delete(doublelist1, 5);
+            Printist<int>(doublelist1);
 
 
 
