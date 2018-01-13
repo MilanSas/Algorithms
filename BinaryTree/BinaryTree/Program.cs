@@ -11,25 +11,25 @@ namespace BinaryTree
         static void Main(string[] args)
         {     
             Node<int> emptyNode = new EmptyNode<int>();
-            var binaryThree = new BinaryThree<int>(emptyNode);
+            var binaryTree = new BinaryTree<int>(emptyNode);
 
-            binaryThree.Insert(5);
-            binaryThree.Insert(7);
-            binaryThree.Insert(6);
-            binaryThree.Insert(4);
-            binaryThree.Insert(13);
-            binaryThree.Insert(9);
-            binaryThree.Insert(2);
-            binaryThree.Insert(1);
-            binaryThree.Insert(3);
-            binaryThree.Insert(69);
-            binaryThree.printnodes();
-            binaryThree.Delete(5);
-            binaryThree.printnodes();
-            binaryThree.Delete(6);
-            binaryThree.printnodes();
-            binaryThree.Delete(7);
-            binaryThree.printnodes();
+            binaryTree.Insert(5);
+            binaryTree.Insert(7);
+            binaryTree.Insert(6);
+            binaryTree.Insert(4);
+            binaryTree.Insert(13);
+            binaryTree.Insert(9);
+            binaryTree.Insert(2);
+            binaryTree.Insert(1);
+            binaryTree.Insert(3);
+            binaryTree.Insert(69);
+            binaryTree.printnodes();
+            binaryTree.Delete(5);
+            binaryTree.printnodes();
+            binaryTree.Delete(6);
+            binaryTree.printnodes();
+            binaryTree.Delete(7);
+            binaryTree.printnodes();
           
 
         }

@@ -300,10 +300,10 @@ namespace BinaryTree
             }
         }
     }
-    //Binary Three with node composition
-    class BinaryThree<T> : Node<T> {
+    //Binary Tree with node composition
+    class BinaryTree<T> : Node<T> {
         Node<T> node;
-        public BinaryThree(Node<T> node) {
+        public BinaryTree(Node<T> node) {
             this.node = node;
         }
 
