@@ -299,6 +299,52 @@ namespace BinaryTree
 
             }
         }
+    }
+    //Binary Three with node composition
+    class BinaryThree<T> : Node<T> {
+        Node<T> node;
+        public BinaryThree(Node<T> node) {
+            this.node = node;
+        }
 
+        public Node<T> Right { get => this.node.Right; set => this.node.Right = value; }
+        public Node<T> Left { get => this.node.Left; set => this.node.Left = value; }
+        public Node<T> Parent { get => this.node.Parent; set => this.node.Parent = value; }
+
+        public Node<T> Delete(T value) {
+            return node.Delete(value);
+        }
+
+        public Node<T> FindMostLeft() {
+            return node.FindMostLeft();
+        }
+
+        public Node<T> FindMostRight() {
+            return node.FindMostRight();
+        }
+
+        public Node<T> getRoot() {
+            return node.getRoot();
+        }
+
+        public T getvalue() {
+            return node.getvalue();
+        }
+
+        public Node<T> Insert(T value) {
+            return this.node = node.Insert(value);
+        }
+
+        public bool isempty() {
+            return node.isempty();
+        }
+
+        public void printnodes() {
+            node.printnodes();
+        }
+
+        public Node<T> Search(T value) {
+           return node.Search(value);
+        }
     }
 }
