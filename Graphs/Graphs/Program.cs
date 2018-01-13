@@ -103,7 +103,7 @@ namespace Graphs
                     else if (alt < root.Distances[neighbour])
                     {
                         root.Distances[neighbour] = alt;
-                        neighbour.bestpath[root] = selectednode;
+                        root.bestpath[neighbour] = selectednode;
                     }
                 }
             }
@@ -168,14 +168,14 @@ namespace Graphs
             Dijkstra(nodelist, A2);
             Dijkstra(nodelist, F2);
 
-            Console.WriteLine("Distance to point A to E: " + A2.getDistance(E2));
+            Console.WriteLine("Distance to point A to B: " + A2.getDistance(B2));
             Console.WriteLine("Distance to point F to A: " + F2.getDistance(A2));
 
-
+            //puts path in reverse, from the destination to start improvements welcome
             Console.WriteLine("best path to A from B");
-            B2.Bestpath(A2);
+            A2.Bestpath(B2);
             Console.WriteLine("best path to F from A");
-            A2.Bestpath(F2);
+            F2.Bestpath(A2);
 
         }
     }

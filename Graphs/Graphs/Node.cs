@@ -21,9 +21,9 @@ namespace Graphs
         {
             if (!Adjacentnodes.Contains(node))
             {
-                this.Adjacentnodes.Add(node);
-                this.Distances.Add(node, distance);
-                this.bestpath.Add(node, node);
+                this.Adjacentnodes.Add(node); //puts adjacent nodes in list
+                this.Distances.Add(node, distance); //calculates costs between nodes
+                this.bestpath.Add(node, this); //puts direct connection as best path for the time
                 node.addNode(this, distance);
             }
         }
@@ -65,9 +65,9 @@ namespace Graphs
             }
             
             else
-            {
-                Console.WriteLine(this.Letter);
-                bestpath[node].Bestpath(node);
+            {  
+                Console.WriteLine(node.Letter);
+                Bestpath(bestpath[node]);
             }
         }
 
