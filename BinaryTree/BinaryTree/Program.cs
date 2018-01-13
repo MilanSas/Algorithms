@@ -9,27 +9,28 @@ namespace BinaryTree
     class Program
     {
         static void Main(string[] args)
-        {
-            Node<int> BinaryTree = new EmptyNode<int>();
+        {     
+            Node<int> emptyNode = new EmptyNode<int>();
+            var binaryTree = new BinaryTree<int>(emptyNode);
 
-            BinaryTree = BinaryTree.Insert(5);
-            BinaryTree = BinaryTree.Insert(7);
-            BinaryTree = BinaryTree.Insert(6);
-            BinaryTree = BinaryTree.Insert(4);
-            BinaryTree = BinaryTree.Insert(13);
-            BinaryTree = BinaryTree.Insert(9);
-            BinaryTree = BinaryTree.Insert(2);
-            BinaryTree = BinaryTree.Insert(1);
-            BinaryTree = BinaryTree.Insert(3);
-            BinaryTree = BinaryTree.Insert(69);
-            BinaryTree.printnodes();
-            BinaryTree = BinaryTree.Delete(5);
-            BinaryTree.printnodes();
-            BinaryTree = BinaryTree.Delete(6);
-            BinaryTree.printnodes();
-            BinaryTree = BinaryTree.Delete(7);
-            BinaryTree.printnodes();
-
+            binaryTree.Insert(5);
+            binaryTree.Insert(7);
+            binaryTree.Insert(6);
+            binaryTree.Insert(4);
+            binaryTree.Insert(13);
+            binaryTree.Insert(9);
+            binaryTree.Insert(2);
+            binaryTree.Insert(1);
+            binaryTree.Insert(3);
+            binaryTree.Insert(69);
+            binaryTree.printnodes();
+            binaryTree.Delete(5);
+            binaryTree.printnodes();
+            binaryTree.Delete(6);
+            binaryTree.printnodes();
+            binaryTree.Delete(7);
+            binaryTree.printnodes();
+          
 
         }
     }

@@ -184,3 +184,4 @@ FakesAssemblies/
 .DS_Store
 *.cache
 *.cache
+BinaryTree/.vs/BinaryTree/v15/Server/sqlite3/db.lock
