@@ -65,10 +65,12 @@ namespace Graphs
         }
 
     static void Dijkstra(List<Node>nodelist, Node root)
-        {   
+        {
             //set all distances from root 
+            List<Node> Nodelist = new List<Node>();
             foreach(Node node in nodelist)         
-            {  
+            {
+                Nodelist.Add(node);
                 if (!root.Distances.ContainsKey(node))
                 {
                     root.Distances[node] = int.MaxValue;
@@ -79,12 +81,12 @@ namespace Graphs
             root.Distances[root] = 0; //forces first selectednode to be the root
 
 
-            while (nodelist.Count > 0)
+            while (Nodelist.Count > 0)
             {
                 Node selectednode = root;
-                selectednode = selectednode.MinDistanceToNode(nodelist); // selects node with minimal costs (I am not using queue because you don't know all the costs so you don't know the order)
+                selectednode = selectednode.MinDistanceToNode(Nodelist); // selects node with minimal costs (I am not using queue because you don't know all the costs so you don't know the order)
                 Console.WriteLine(selectednode.Letter);                  // prints node so you can see the path it takes
-                nodelist.Remove(selectednode);                           // removes the selected node from lists
+                Nodelist.Remove(selectednode);                           // removes the selected node from lists
                 
                 foreach(Node neighbour in selectednode.Adjacentnodes)
                 {
@@ -143,7 +145,7 @@ namespace Graphs
             DFS(graph, A, (n) => Console.WriteLine(n.Letter));
 
 
-            // Graph example Hogeschool Dev6a
+            // Graph example Hogeschool Dev6a/
             Node A2 = new Node("A");
             Node B2 = new Node("B");
             Node C2 = new Node("C");
@@ -164,11 +166,15 @@ namespace Graphs
 
             Console.WriteLine("Order dijkstra through graph: ");
             Dijkstra(nodelist, A2);
+            Dijkstra(nodelist, F2);
 
-            Console.WriteLine("Distance to point E: " + A2.getDistance(E2));
+            Console.WriteLine("Distance to point A to E: " + A2.getDistance(E2));
+            Console.WriteLine("Distance to point F to A: " + F2.getDistance(A2));
+
 
             Console.WriteLine("best path to A from F");
             F2.Bestpath(A2);
+            F2.getDistance(A2);
 
         }
     }
