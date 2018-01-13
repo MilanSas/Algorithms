@@ -172,9 +172,10 @@ namespace Graphs
             Console.WriteLine("Distance to point F to A: " + F2.getDistance(A2));
 
 
-            Console.WriteLine("best path to A from F");
-            F2.Bestpath(A2);
-            F2.getDistance(A2);
+            Console.WriteLine("best path to A from B");
+            B2.Bestpath(A2);
+            Console.WriteLine("best path to F from A");
+            A2.Bestpath(F2);
 
         }
     }
