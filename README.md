@@ -1,2 +1,2 @@
 # Algorithms
-Practice Algrorithms
+Algortihms ranging from sorting algorithms and beyond.
